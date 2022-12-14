@@ -5,5 +5,14 @@ Welcome
 {% endblock %}
 
 {% block content%}
-Home page    
+    <div class="flex flex-wrap">
+        {% for product in products %}
+            <div class="product w-1/3 p-2">
+                <div class="p-4 bg-gray-100">
+                    <h2 class="text-x">{{ product.title }}</h2>
+                    <p class="text-xs text-gray-600">R{{ product.price  }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
 {% endblock %}
